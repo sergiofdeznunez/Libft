@@ -6,23 +6,11 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 12:21:50 by snunez            #+#    #+#             */
-/*   Updated: 2021/01/28 13:14:44 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/06 14:05:39 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	unsigned int	i;
-	char			*aux;
-
-	aux = (char *)s;
-	i = 0;
-	while (*(aux + i))
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

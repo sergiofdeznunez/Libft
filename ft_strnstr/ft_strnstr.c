@@ -6,22 +6,11 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 14:55:05 by snunez            #+#    #+#             */
-/*   Updated: 2021/01/28 10:51:08 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/06 13:53:35 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-size_t	ft_strlen(const char *s)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (*(s + i))
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

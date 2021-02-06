@@ -6,23 +6,11 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 09:15:13 by snunez            #+#    #+#             */
-/*   Updated: 2021/01/27 09:50:11 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/06 14:04:31 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	char			*aux;
-	unsigned int	i;
-
-	aux = (char *)s;
-	i = 0;
-	while (*(aux + i))
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

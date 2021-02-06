@@ -6,17 +6,17 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 12:59:42 by snunez            #+#    #+#             */
-/*   Updated: 2021/01/26 13:09:56 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/06 14:03:41 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	int				*nums;
 	unsigned int	i;
-	
+
 	i = 0;
 	if (nmemb == 0)
 		return (NULL);

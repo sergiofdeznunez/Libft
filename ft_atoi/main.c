@@ -6,10 +6,10 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 09:35:48 by snunez            #+#    #+#             */
-/*   Updated: 2021/01/25 16:16:42 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/05 15:13:04 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
