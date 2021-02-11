@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -Werror -Wall -Wextra 
 
-SRCS = $(shell find . -name "*.c")
+SRCS = $(shell find . -name "ft_*.c")
 
 OBJS = ${SRCS:.c=.o}
 

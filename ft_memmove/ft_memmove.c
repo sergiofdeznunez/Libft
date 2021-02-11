@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 11:52:06 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 13:43:55 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/06 18:00:30 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	while (i < n)
 	{
 		*(aux3 + i) = *(aux + i);
+		i++;
+	}
+	i = 0;
+	while (i < n)
+	{
 		*(aux2 + i) = *(aux3 + i);
 		i++;
 	}

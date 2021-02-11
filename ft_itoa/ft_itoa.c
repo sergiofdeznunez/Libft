@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 15:45:32 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 16:40:45 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/08 19:24:46 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,24 @@
 
 size_t		len_nb(int nb)
 {
-	size_t	space;
+	size_t		space;
+	long int	nbr;
 
 	space = 0;
-	if (nb == 0)
+	nbr = (long int)nb;
+	if (nbr == 0)
 	{
 		space++;
 		return (space);
 	}
-	if (nb < 0)
+	if (nbr < 0)
 	{
-		nb = nb * (-1);
+		nbr = nbr * (-1);
 		space++;
 	}
-	while (nb > 0)
+	while (nbr > 0)
 	{
-		nb = nb / 10;
+		nbr = nbr / 10;
 		space++;
 	}
 	return (space);

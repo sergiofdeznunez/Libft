@@ -5,23 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/23 18:18:28 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/10 11:41:15 by snunez           ###   ########.fr       */
+/*   Created: 2021/02/08 10:11:20 by snunez            #+#    #+#             */
+/*   Updated: 2021/02/08 10:19:19 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
+#include "ft_substr.c"
+
+void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
 
 int	main()
 {
-	char	cad[15];
-	char	cadena[15];
-	char	cad2[] = "lorem ipsum";
-	
-	printf("%zu\n", ft_strlcat(cad, cad2, 15));
-	printf("%s\n", cad);
-	printf("%zu\n", strlcat(cadena, cad2, 15));
-	printf("%s\n", cadena);
+	char	str[] = "lorem ipsum dolor sit amet";
+	char	*strsub;
+
+	if (!(strsub = ft_substr(str, 7, 10)))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strsub);
+		if (str == strsub)
+			ft_print_result("\nA new string was not returned");
 }

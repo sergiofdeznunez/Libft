@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 08:57:44 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 14:11:45 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/09 09:35:19 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		num = num * (-1);
 	}
-	else if (num >= 10)
+	if (num >= 10)
 	{
 		ft_putnbr_fd((num / 10), fd);
 		ft_putnbr_fd((num % 10), fd);

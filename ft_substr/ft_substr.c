@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 10:55:33 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 14:05:00 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/08 18:36:33 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*cad;
 
 	aux = (char *)s;
-	i = start;
+	i = 0;
 	j = 0;
 	if (!(cad = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
+	if (start >= len)
+	{
+		*(cad) = '\0';
+		return (cad);
+	}
 	while (i < len)
 	{
-		*(cad + j) = *(aux + i);
+		*(cad + j) = *(aux + start + i);
 		i++;
 		j++;
 	}

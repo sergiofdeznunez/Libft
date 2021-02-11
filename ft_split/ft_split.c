@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 16:03:25 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 14:08:25 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/11 12:07:33 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 size_t	ft_howmany(const char *s, char c)
 {
-	unsigned int	i;
 	unsigned int	cont;
 
-	i = 0;
 	cont = 0;
 	while (*(s) == c)
 		s++;
-	while (*(s + i))
+	while (*(s))
 	{
-		if (*(s + i) == c)
+		if (*(s) != c)
 		{
 			cont++;
-			if (*(s + i + 1) == c || *(s + i + 1) == '\0')
+			if (*(s + 1) != c && *(s + 1) != '\0')
 				cont--;
 		}
-		i++;
+		s++;
 	}
 	return (cont);
 }
@@ -67,12 +65,11 @@ char	**ft_split(char const *s, char c)
 	unsigned int	sizecad;
 	char			*aux;
 
+	if (!(respuesta = (char **)malloc((ft_howmany(s, c) + 1) * sizeof(char *))))
+		return (NULL);
 	aux = (char *)s;
 	i = 0;
-	if (!(respuesta = (char **)malloc((ft_howmany(s, c) + 2) * sizeof(char *)))
-			|| (*(s) == '\0'))
-		return (NULL);
-	while (i <= ft_howmany(s, c))
+	while (i < ft_howmany(s, c))
 	{
 		while (*(aux) == c)
 			aux++;
