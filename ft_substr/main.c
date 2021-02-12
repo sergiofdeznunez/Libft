@@ -6,13 +6,14 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 10:11:20 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/08 10:19:19 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/12 17:40:53 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "ft_substr.c"
+#include <stdio.h>
 
 void	ft_print_result(char const *s)
 {
@@ -26,13 +27,9 @@ void	ft_print_result(char const *s)
 
 int	main()
 {
-	char	str[] = "lorem ipsum dolor sit amet";
+	char	str[] = "ftn5948RIQgJbdgadgdfg";
 	char	*strsub;
 
-	if (!(strsub = ft_substr(str, 7, 10)))
-			ft_print_result("NULL");
-		else
-			ft_print_result(strsub);
-		if (str == strsub)
-			ft_print_result("\nA new string was not returned");
+	strsub = ft_substr(str, 7, 4);
+	printf("%s\n", strsub);
 }
