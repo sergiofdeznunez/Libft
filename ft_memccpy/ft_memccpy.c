@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 15:35:06 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 13:43:28 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/13 17:57:13 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	while (i < n)
 	{
 		*(aux2 + i) = *(aux + i);
-		if (*(aux + i) == c)
+		if (*(aux + i) == (unsigned char)c)
 			return (dest + i + 1);
 		i++;
 	}
