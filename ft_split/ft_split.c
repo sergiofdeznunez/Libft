@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 16:03:25 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/11 12:07:33 by snunez           ###   ########.fr       */
+/*   Updated: 2021/02/15 09:43:38 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_howmany(const char *s, char c)
 	unsigned int	cont;
 
 	cont = 0;
-	while (*(s) == c)
+	while (*(s) == c && *(s))
 		s++;
 	while (*(s))
 	{
