@@ -14,7 +14,7 @@ ${NAME}:	${OBJS}
 all: ${NAME}
 
 clean:
-	rm -f *.o
+	rm -f $(shell find . -name "*.o")
 
 fclean:	clean
 	rm -f ${NAME}
