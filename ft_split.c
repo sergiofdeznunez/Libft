@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 16:03:25 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/15 13:22:59 by snunez           ###   ########.fr       */
+/*   Updated: 2021/03/08 12:10:56 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ char	**ft_split(char const *s, char c)
 	unsigned int	sizecad;
 	char			*aux;
 
-	if (!(respuesta = (char **)malloc((ft_howmany(s, c) + 1) * sizeof(char *))))
+	respuesta = (char **)malloc((ft_howmany(s, c) + 1) * sizeof(char *));
+	if (respuesta == NULL)
 		return (NULL);
 	aux = (char *)s;
 	i = 0;
@@ -74,7 +75,8 @@ char	**ft_split(char const *s, char c)
 		while (*(aux) == c)
 			aux++;
 		sizecad = ft_countchars(aux, c);
-		if (!(*(respuesta + i) = ft_substr(aux, 0, sizecad)))
+		*(respuesta + i) = ft_substr(aux, 0, sizecad);
+		if (*(respuesta + i) == NULL)
 			return (ft_free(respuesta, i));
 		aux = aux + sizecad;
 		i++;

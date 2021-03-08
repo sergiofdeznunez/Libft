@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 09:15:13 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/11 17:55:51 by snunez           ###   ########.fr       */
+/*   Updated: 2021/03/08 12:14:27 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strdup(const char *s)
 
 	aux = (char *)s;
 	i = 0;
-	if (!(cad = (char *)malloc((ft_strlen(aux) + 1) * sizeof(char))))
+	cad = (char *)malloc((ft_strlen(aux) + 1) * sizeof(char));
+	if (cad == NULL)
 		return (NULL);
 	while (*(aux + i))
 	{

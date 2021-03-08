@@ -6,7 +6,7 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 10:55:33 by snunez            #+#    #+#             */
-/*   Updated: 2021/03/02 19:03:15 by snunez           ###   ########.fr       */
+/*   Updated: 2021/03/08 12:19:57 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s || len < 0 || start < 0)
 		return (NULL);
-	if (!(cad = (char *)malloc((ft_strlen(s) + 1) * sizeof(char))))
+	cad = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (cad == NULL)
 		return (NULL);
 	if (start > (unsigned int)ft_strlen(s))
 	{

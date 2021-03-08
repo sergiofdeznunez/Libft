@@ -6,13 +6,13 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 13:31:45 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 14:02:32 by snunez           ###   ########.fr       */
+/*   Updated: 2021/03/08 10:34:36 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
 		return (1);

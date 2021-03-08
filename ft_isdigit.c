@@ -6,13 +6,13 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 11:39:48 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/06 13:57:38 by snunez           ###   ########.fr       */
+/*   Updated: 2021/03/08 10:34:22 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c > 47 && c < 58)
 		return (1);

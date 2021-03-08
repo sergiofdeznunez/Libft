@@ -6,13 +6,13 @@
 /*   By: snunez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 09:29:36 by snunez            #+#    #+#             */
-/*   Updated: 2021/02/11 16:49:39 by snunez           ###   ########.fr       */
+/*   Updated: 2021/03/08 09:51:35 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_iswhite(char c)
+int	ft_iswhite(char c)
 {
 	if ((c == ' ') || (c == '\f') || (c == '\n'))
 		return (1);
@@ -21,7 +21,7 @@ int		ft_iswhite(char c)
 	return (0);
 }
 
-int		ft_sacarnb(const char *str, int i, int signo)
+int	ft_sacarnb(const char *str, int i, int signo)
 {
 	int		base;
 	int		num;
@@ -44,7 +44,7 @@ int		ft_sacarnb(const char *str, int i, int signo)
 	return (num * signo);
 }
 
-int		ft_atoi(const char *s)
+int	ft_atoi(const char *s)
 {
 	int		i;
 	int		signo;
