@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_free_double_pointer.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snunez <snunez@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/23 11:52:06 by snunez            #+#    #+#             */
-/*   Updated: 2022/02/07 11:55:35 by snunez           ###   ########.fr       */
+/*   Created: 2022/02/07 10:22:36 by snunez            #+#    #+#             */
+/*   Updated: 2022/02/07 13:41:57 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_free_double_pointer(void **pointer)
 {
-	unsigned int	i;
-	char			*aux;
-	char			*aux2;
-	const int		SIZE = n;
-	char			aux3[SIZE];
+	int	i;
 
 	i = 0;
-	aux = (char *)src;
-	aux2 = (char *)dest;
-	while (i < n)
+	while (pointer[i])
 	{
-		*(aux3 + i) = *(aux + i);
+		free(pointer[i]);
 		i++;
 	}
-	i = 0;
-	while (i < n)
-	{
-		*(aux2 + i) = *(aux3 + i);
-		i++;
-	}
-	return (dest);
+	free(pointer);
 }

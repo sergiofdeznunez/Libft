@@ -6,12 +6,15 @@
 /*   By: snunez <snunez@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 15:09:05 by snunez            #+#    #+#             */
-/*   Updated: 2022/01/31 12:14:24 by snunez           ###   ########.fr       */
+/*   Updated: 2022/02/07 13:38:33 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -50,6 +53,9 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr_base(int nbr, char *base);
+void	ft_putnbr_base_long(size_t nbr, char *base);
+void	ft_free_double_pointer(void **pointer);
+int		get_next_line(int fd, char **line);
 typedef struct s_list
 {
 	void			*content;
