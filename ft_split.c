@@ -32,7 +32,7 @@ size_t	ft_howmany(const char *s, char c)
 	return (cont);
 }
 
-char	**ft_free(char **array, size_t len_array)
+char	**ft_free(char **array, int len_array)
 {
 	while (len_array >= 0)
 	{
