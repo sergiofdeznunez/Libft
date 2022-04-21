@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   catch_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snunez <snunez@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/24 13:42:48 by snunez            #+#    #+#             */
-/*   Updated: 2022/04/21 12:48:46 by snunez           ###   ########.fr       */
+/*   Created: 2022/04/21 12:43:28 by snunez            #+#    #+#             */
+/*   Updated: 2022/04/21 12:49:04 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "Libft-Mia-/libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	catch_error(int error)
 {
-	int		i;
-	char	*aux;
-
-	aux = (char *)s;
-	i = 0;
-	while (*(aux + i))
-		i++;
-	if (c == '\0')
-		return (aux + i);
-	while (i >= 0)
+	if (error == -1)
 	{
-		if (*(aux + i) == c)
-			return (aux + i);
-		if (i == 0 && *(aux + i) != c)
-			return (NULL);
-		i--;
+		perror("Error.");
+		exit(EXIT_FAILURE);
 	}
-	return (NULL);
+	return (0);
 }
