@@ -6,7 +6,7 @@
 /*   By: snunez <snunez@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 15:09:05 by snunez            #+#    #+#             */
-/*   Updated: 2022/04/21 12:45:44 by snunez           ###   ########.fr       */
+/*   Updated: 2022/04/21 13:03:42 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	ft_putnbr_base_long(size_t nbr, char *base);
 void	ft_free_double_pointer(void **pointer);
 int		get_next_line(int fd, char **line);
 int		catch_error(int error);
-void	catch_error(int error);
+void	catch_verror(int error);
 typedef struct s_list
 {
 	void			*content;
