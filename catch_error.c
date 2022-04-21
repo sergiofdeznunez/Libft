@@ -6,11 +6,11 @@
 /*   By: snunez <snunez@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 12:43:28 by snunez            #+#    #+#             */
-/*   Updated: 2022/04/21 12:49:04 by snunez           ###   ########.fr       */
+/*   Updated: 2022/04/21 13:07:10 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft-Mia-/libft.h"
+#include "libft.h"
 
 int	catch_error(int error)
 {

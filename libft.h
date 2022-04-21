@@ -6,7 +6,7 @@
 /*   By: snunez <snunez@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 15:09:05 by snunez            #+#    #+#             */
-/*   Updated: 2022/04/21 13:03:42 by snunez           ###   ########.fr       */
+/*   Updated: 2022/04/21 13:07:49 by snunez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # endif
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
