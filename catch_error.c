@@ -16,8 +16,8 @@ int	catch_error(int error)
 {
 	if (error == -1)
 	{
-		perror("Error.");
+		perror("Error(c_error)");
 		exit(EXIT_FAILURE);
 	}
-	return (0);
+	return (error);
 }

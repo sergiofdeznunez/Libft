@@ -16,7 +16,7 @@ void	catch_verror(int error)
 {
 	if (error == -1)
 	{
-		perror("Error.");
+		perror("Error(v_error)");
 		exit(EXIT_FAILURE);
 	}
 }
